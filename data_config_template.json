@@ -1,0 +1,71 @@
+{
+    "docstring": "DESCRIBE THE DATA. THIS CAN BE A LENGHTY PARAGRAPH PERHAPS. NOT USED BY PIPELINE.",
+    "data_label": "LABEL THE DATA. A SHORT UNIQUE LABEL. NOT USED BY PIPELINE.",
+    "data_version": "VERSION_EG_MATERIALIZATION DESCRIPTOR",
+    "data_sizes" : {
+        "docstring": "A tuple indicating: (1) Num bytes and (2) num records (i.e. table/CSV rows, etc.) in the data. Multiple data sizes are supported via Code Ocean data source names to facilitate development/debugging against smaller subsets of the data.",
+        "THE EASIEST LABEL IS THE NAME OF THE DATA CSV FILE WITHOUT THE '.csv' EXTENSION": [NUM_BYTES, NUM_ANNOTATIONS_EG_CSV_ROWS]
+        REMOVE THIS LINE -- YOU CAN ADD ADDITIONAL DATA SIZES FOR TESTING SUBSETS
+    },
+    "volume_bounds": [
+        [MIN_X, MIN_Y, MIN_Z],
+        [MAX_X, MAX_Y, MAX_Z]
+    ],
+    "dimensions": {
+        "x": [X, "UNITS_EG_nm"],
+        "y": [Y, "UNITS"],
+        "z": [Z, "UNITS"]
+    },
+    "spatial_limit": {
+        "docstring": "EXAMPLE: Assume a limit of .5 synapses per cubic micron",
+        "max_annotations_per_cubic_micron": THIS VALUE VARIES WITH ANNOTATION TYPE
+    },
+    "properties": {
+        "PROPERTY_LABEL": {
+            REMOVE THIS LINE -- ONE OF uint8, int8, uint16, int16, uint32, int32, float32
+            "type": "TYPE STRING AS INDICATED ON PREVIOUS LINE",
+            "column": "CSV COLUMN"
+        }
+        REMOVE THIS LINE -- ADDITIONAL PROPERTIES AS NEEDED
+    },
+    "relations": {
+        "RELATION_LABEL": {
+            "column": "CSV COLUMN"
+        },
+        REMOVE THIS LINE -- ADDITIONAL RELATIONS AS NEEDED
+    },
+    "columns": [
+        REMOVE THIS LINE -- CSV COLUMNS
+        "CSV COLUMN A",
+        "CSV COLUMN B",
+        "ETC."
+    ],
+    "id_column": "CSV COLUMN INDICATING THE ANNOTATIONS' UNIQUE IDS",
+    "structure": "one_annotation_per_row__multiple_points_per_row",
+
+
+    REMOVE THIS LINE -- REMOVE ALL BUT ONE OF THE FOLLOWING SECTIONS
+    "POINT_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "pt_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW",
+    },
+    "line_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "start_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW",
+        "end_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW"
+    },
+    "polyline_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW"
+    },
+
+
+    "spatial_pt_columns": {
+        REMOVE THIS LINE -- POINT ANNOTATIONS REQUIRE ONE ENTRY IN THIS SECTION. LINE ANNOTATONS REQUIRE TWO. POLYLINES REQUIRE ASSISTANCE FROM KEITH.
+        "LABEL": {
+            "x": "CSV COLUMN",
+            "y": "CSV COLUMN",
+            "z": "CSV COLUMN"
+        },
+    }
+}
