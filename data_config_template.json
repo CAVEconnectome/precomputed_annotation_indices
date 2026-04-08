@@ -18,8 +18,16 @@
     },
     "spatial_limit": {
         "docstring": "EXAMPLE: Assume a limit of .5 synapses per cubic micron",
-        "max_annotations_per_cubic_micron": THIS VALUE VARIES WITH ANNOTATION TYPE
+        "max_annotations_per_cubic_micron": THIS VALUE VARIES WITH ANNOTATION TYPE. ASSIGN null TO DISABLE.
     },
+    "structure": "one_annotation_per_row__multiple_points_per_row",
+    "columns": [
+        REMOVE THIS LINE -- CSV COLUMNS
+        "CSV COLUMN A",
+        "CSV COLUMN B",
+        "ETC."
+    ],
+    "id_column": "CSV COLUMN INDICATING THE ANNOTATIONS' UNIQUE IDS",
     "properties": {
         "PROPERTY_LABEL": {
             REMOVE THIS LINE -- ONE OF uint8, int8, uint16, int16, uint32, int32, float32
@@ -34,30 +42,6 @@
         },
         REMOVE THIS LINE -- ADDITIONAL RELATIONS AS NEEDED
     },
-    "columns": [
-        REMOVE THIS LINE -- CSV COLUMNS
-        "CSV COLUMN A",
-        "CSV COLUMN B",
-        "ETC."
-    ],
-    "id_column": "CSV COLUMN INDICATING THE ANNOTATIONS' UNIQUE IDS",
-    "structure": "one_annotation_per_row__multiple_points_per_row",
-
-
-    REMOVE THIS LINE -- REMOVE ALL BUT ONE OF THE FOLLOWING SECTIONS
-    "POINT_annotation_config": {
-        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
-        "pt_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW",
-    },
-    "line_annotation_config": {
-        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
-        "start_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW",
-        "end_pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW"
-    },
-    "polyline_annotation_config": {
-        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
-        "pt_column_label": "LABEL FROM spatial_pt_columns SECTION BELOW"
-    },
 
 
     "spatial_pt_columns": {
@@ -68,4 +52,20 @@
             "z": "CSV COLUMN"
         },
     }
+
+
+    REMOVE THIS LINE -- REMOVE ALL BUT ONE OF THE FOLLOWING SECTIONS
+    "point_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "pt_pt_column_label": "LABEL FROM spatial_pt_columns SECTION",
+    },
+    "line_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "start_pt_column_label": "LABEL FROM spatial_pt_columns SECTION",
+        "end_pt_column_label": "LABEL FROM spatial_pt_columns SECTION"
+    },
+    "polyline_annotation_config": {
+        "docstring": "The values specified in this object for pt_column_labels must indicate names in the 'spatial_pt_columns' object.",
+        "pt_column_label": "LABEL FROM spatial_pt_columns SECTION"
+    },
 }
