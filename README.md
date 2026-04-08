@@ -34,7 +34,7 @@ Here are the steps to produce a precomputed annotation index from an annotation 
 
 		<p align="center">
 		<img src="./images/pipeline_template_pipeline_menu.png" width="33%">
-		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<img src="./images/pipeline_template_pipeline_menu_duplicate.png" width="33%" style="margin-left:50px">
 		</p>
 
@@ -50,7 +50,7 @@ Here are the steps to produce a precomputed annotation index from an annotation 
 
 	<p align="center">
 	<img src="./images/data_asset_management.png" width="33%">
-	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/data_asset_management_data_config.png" width="33%" style="margin-left:50px">
 	</p>
 
@@ -68,7 +68,7 @@ Here are the steps to produce a precomputed annotation index from an annotation 
 
 	<p align="center">
 	<img src="./images/data_config_connected.png" width="33%">
-	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/data_connected.png" width="33%" style="margin-left:50px">
 	</p>
 
@@ -81,7 +81,7 @@ Here are the steps to produce a precomputed annotation index from an annotation 
 
 	<p align="center">
 	<img src="./images/edit_config_connection.png" width="33%">
-	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/edit_data_connection.png" width="33%" style="margin-left:50px">
 	</p>
 
