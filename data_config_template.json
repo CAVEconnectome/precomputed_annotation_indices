@@ -30,7 +30,7 @@
     "id_column": "CSV COLUMN INDICATING THE ANNOTATIONS' UNIQUE IDS",
     "properties": {
         "PROPERTY_LABEL": {
-            REMOVE THIS LINE -- ONE OF uint8, int8, uint16, int16, uint32, int32, float32
+            REMOVE THIS LINE -- ONE OF rgb, rgba, uint8, int8, uint16, int16, uint32, int32, float32
             "type": "TYPE STRING AS INDICATED ON PREVIOUS LINE",
             "column": "CSV COLUMN"
         }
