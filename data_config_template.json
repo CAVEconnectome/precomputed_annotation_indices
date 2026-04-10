@@ -30,9 +30,12 @@
     "id_column": "CSV COLUMN INDICATING THE ANNOTATIONS' UNIQUE IDS",
     "properties": {
         "PROPERTY_LABEL": {
-            "id": "CSV COLUMN"
+            "id": "CSV COLUMN",
             REMOVE THIS LINE -- ONE OF rgb, rgba, uint8, int8, uint16, int16, uint32, int32, float32
             "type": "TYPE STRING AS INDICATED ON PREVIOUS LINE",
+            "description": "UP TO YOU",
+            "enum_values": "REMOVE AS NEEDED. NOT ALLOWED FOR TYPE rgb, rgba",
+            "enum_labels": "INCLUDE IFF enum_values IS INCLUDED"
         }
         REMOVE THIS LINE -- ADDITIONAL PROPERTIES AS NEEDED
     },
