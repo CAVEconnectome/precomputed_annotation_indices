@@ -120,33 +120,25 @@ Here's the detailed walkthrough:
 	<img src="./images/data_assets_connected.png" width="67%">
 	</p>
 
+10. Edit the data connection:
+	1. Click the gear icon of the connection to open its settings.
+	2. Change the ***Connection Type*** from *Default* to *Collect*.
+	3. Click Confirm.
+
 	<p align="center">
-	<img src="./images/data_config_connected.png" width="33%">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/data_connected.png" width="33%" style="margin-left:50px">
-	</p>
-
-	1. Click the data config connection's gear icon to edit the connection:
-		1. Under ***Destination***, add "data\_config.json" so it says "capsule/data/data\_config.json".
-		2. Click Confirm.
-	2. Edit the data connection:
-		1. Change the ***Connection Type*** from *Default* to *Collect*.
-		2. Click Confirm.
-
-	<p align="center">
-	<img src="./images/edit_config_connection.png" width="33%">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="./images/edit_data_connection.png" width="33%" style="margin-left:50px">
+	<img src="./images/edit_data_connection.png" width="33%">
 	</p>
 
-10. In the upper-left corner, select ***App Builder***.
+11. In the upper-left corner, select ***App Builder***.
 
 	<p align="center">
 	<img src="./images/app_builder.png" width="33%">
 	</p>
 	
-11. Set ***data\_config\_filename*** parameter to "data_config.json".
-12. Set ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). Here's a helpful way to find this string without going back to the json file on your local computer:
+12. Set ***data\_config\_filename*** parameter to "data_config.json".
+13. Set ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). Here's a helpful way to find this string without going back to the json file on your local computer:
 	1. Switch from the App Builder view to the Files view.
 	2. Click the data config asset under the data folder. This will expand its drop-down view to reveal its contents, namely your json file.
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
@@ -156,13 +148,13 @@ Here's the detailed walkthrough:
 	<img src="./images/app_builder_populated.png" width="50%">
 	</p>
 	
-13. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
+14. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
 
 	<p align="center">
 	<img src="./images/reproducility_section_and_run_button.png" width="33%">
 	</p>
 	
-14. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
+15. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
 
 	<p align="center">
 	<img src="./images/pipeline_running_1.png">
@@ -178,25 +170,25 @@ Here's the detailed walkthrough:
 	<img src="./images/pipeline_run_successfully_completed.png">
 	</p>
 	
-15. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
+16. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
 
 	<p align="center">
 	<img src="./images/results.png" width="33%">
 	</p>
 	
-16. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`. Copy this value.
+17. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`. Copy this value.
 
 	<p align="center">
 	<img src="./images/results_neuroglancer_uri.png">
 	</p>
 	
-17. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
+18. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
 
 	<p align="center">
 	<img src="./images/neuroglancer.png">
 	</p>
 	
-18. The admin (Keith) has the option to move unreleased indices to a more public-facing URI (one that doesn't have "unreleased" in the URI). Ask Keith for help with this as needed.
+19. The admin (Keith) has the option to move unreleased indices to a more public-facing URI (one that doesn't have "unreleased" in the URI). Ask Keith for help with this as needed.
 
 ### Done!
 
