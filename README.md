@@ -50,9 +50,9 @@ Here's the detailed walkthrough:
 		10. Exactly one of the following sections (remove the one from the template that doesn't apply to your annotation data):
 			1. `id_column` Only use this option for the time being. The id column name indicating which column uniquely labels each annotation.
 			2. `id_src` *TODO: document polyline annotation indexing.*
-		11. `properties` Each consisting of a label, a type (options are listed in the template; use them exactly as provided), and a column name.
-		12. `relations` Each consisting of a label and a column name.
-		13. `spatial_pt_columns` A set labeled column-name-triplets indicating point coordinates.
+		11. `properties` Each property consists of a label, a type (options are listed in the template; use them exactly as provided), and a column name (indicated by "id" in the json). Optionally, properties can be enums, in which case they must also include enum\_values and enum\_labels, as shown in the template. If either enum field is provided, both must be provided, both lists must be the same length, and the values must match the indicated type.
+		12. `relations` Each relation consists of a label and a column name (indicated by "id" in the json).
+		13. `spatial_pt_columns` A set of labeled column-name-triplets indicating point coordinates.
 		14. Exactly one of the following sections (remove the two from the template that don't apply to your annotation data):
 			1. `point_annotation_config`:
 				1. "pt\_pt\_column\_label": the one corresponding label you added to the "spatial\_pt\_columns" section of this file.
@@ -70,7 +70,7 @@ Here's the detailed walkthrough:
 	<img src="./images/pipeline_template.png">
 	</p>
 
-5. ***Please don't use this pipeline! Instead, immediately duplicate it, thusly:***
+5. ***Please don't use this pipeline! I believe it is shared in a read-only status, but please pay attention anyway. Instead, immediately duplicate it, thusly:***
 	1. In the upper-left corner, find the menu bar and the left-most ***Pipeline*** menu. Expand that menu and select ***Duplicate***. Wait for it to process...
 
 		<p align="center">
@@ -130,7 +130,7 @@ Here's the detailed walkthrough:
 		1. Under ***Destination***, add "data\_config.json" so it says "capsule/data/data\_config.json".
 		2. Click Confirm.
 	2. Edit the data connection:
-		1. Change the ***Connection Type*** from Default to Collect.
+		1. Change the ***Connection Type*** from *Default* to *Collect*.
 		2. Click Confirm.
 
 	<p align="center">
@@ -150,7 +150,7 @@ Here's the detailed walkthrough:
 	1. Switch from the App Builder view to the Files view.
 	2. Click the data config asset under the data folder. This will expand its drop-down view to reveal its contents, namely your json file.
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
-	4. Find the "data_sizes" section of the json file. Then find the label you assigned, and copy it. You can then go back to the App Builder and paste it into the data\_source parameter.
+	4. Find the "data_sizes" section of the json file. Then find the label you assigned, and copy it. You can then go back to the App Builder and paste it into the ***data\_source\_name*** parameter.
 
 	<p align="center">
 	<img src="./images/app_builder_populated.png" width="50%">
@@ -162,7 +162,7 @@ Here's the detailed walkthrough:
 	<img src="./images/reproducility_section_and_run_button.png" width="33%">
 	</p>
 	
-14. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated.
+14. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
 
 	<p align="center">
 	<img src="./images/pipeline_running_1.png">
@@ -178,7 +178,7 @@ Here's the detailed walkthrough:
 	<img src="./images/pipeline_run_successfully_completed.png">
 	</p>
 	
-15. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file/folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
+15. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
 
 	<p align="center">
 	<img src="./images/results.png" width="33%">
