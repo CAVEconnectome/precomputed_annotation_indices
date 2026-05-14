@@ -1,3 +1,0 @@
-[submodule "pipelines/mapreduce-synapses"]
-	path = pipelines/mapreduce-synapses
-	url = https://codeocean.allenneuraldynamics.org/capsule-9094939.git
