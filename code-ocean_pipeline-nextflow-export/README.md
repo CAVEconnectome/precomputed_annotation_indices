@@ -1,0 +1,1 @@
+The contents of this directory, minus this added Git README file, constitute the result of exporting the Code Ocean pipeline from the Pipeline menu, which produces a Nextflow project on the local machine.
