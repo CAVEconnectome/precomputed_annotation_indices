@@ -42,7 +42,7 @@ Here's the detailed walkthrough:
 
 1. Export the table from the database as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
 2. Create a data config json file. The name doesn't matter.
-	1. Start from a local copy of the template provided in this repo and populate all the required fields (indicated in all-caps). This file must end up as legal JSON. Pass it through a JSON validator after you fill it in. Several are readily found online.
+	1. Start from a local copy of the template provided in this repo (*data\_config\_template.json*) and populate all the required fields (indicated in all-caps). This file must end up as legal JSON. Pass it through a JSON validator after you fill it in. Several are readily found online. If aspects of the template are confusing, use the example file (*data\_config\_example.json*) to guide you. It shows a fully populated config file for the MICrONS synapse annotation table.
 	2. Amongst other aspects of the data for this template, you will need:
 		1. The size of the CSV file in bytes and rows (i.e., number of annotations).
 		2. The spatial point lower and upper bounds. This is easiest — if a bit tedious — by line-scanning the CSV file to find the data bounds. I may attempt to incorporate this calculation into the pipeline at some future time, but without caching the results somehow (and enabling the pipeline to find such a cache), adding this calculation to the pipeline needlessly extends the pipeline running time on repeated attempts despite the fact that these bounds won't change from run to run.
@@ -75,7 +75,7 @@ Here's the detailed walkthrough:
 		15. Congratulations on completing the data config file. 
 3. Upload the CSV or Parquet data file and the data config json file to Code Ocean as two new Data Assets.
 	1. TODO: provide some description of this process within the Code Ocean interface.
-4. Open the Code Ocean pipeline: `https://codeocean.allenneuraldynamics.org/capsule/2041409/tree`
+4. Open the Code Ocean pipeline: [https://codeocean.allenneuraldynamics.org/capsule/1541857/tree](https://codeocean.allenneuraldynamics.org/capsule/1541857/tree)
 
 	<p align="center">
 	<img src="./images/pipeline_template.png">
@@ -90,7 +90,7 @@ Here's the detailed walkthrough:
 		<img src="./images/pipeline_template_pipeline_menu_duplicate.png" width="33%" style="margin-left:50px">
 		</p>
 
-	2. Please confirm that you are working in a new pipeline. The pipeline's name along the top of the display will show "Copy of" if you were succesful.
+	2. Please confirm that you are working in a new pipeline. The pipeline's name along the top of the display will show "Copy of" if you were succesful. Feel free to rename the pipeline if you wish. Simply click on the name to edit it.
 
 		<p align="center">
 		<img src="./images/pipeline_copy.png" width="50%">
@@ -149,14 +149,19 @@ Here's the detailed walkthrough:
 	</p>
 	
 12. Set ***data\_config\_filename*** parameter to "data_config.json".
+
+	<p align="center">
+	<img src="./images/app_builder_populated_1.png" width="50%">
+	</p>
+	
 13. Set ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). Here's a helpful way to find this string without going back to the json file on your local computer:
 	1. Switch from the App Builder view to the Files view.
 	2. Click the data config asset under the data folder. This will expand its drop-down view to reveal its contents, namely your json file.
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
-	4. Find the "data_sizes" section of the json file. Then find the label you assigned, and copy it. You can then go back to the App Builder and paste it into the ***data\_source\_name*** parameter.
+	4. Find the "data_sizes" section in the json file. Then find the label you assigned, and copy it. You can then go back to the App Builder and paste it into the ***data\_source\_name*** parameter:
 
 	<p align="center">
-	<img src="./images/app_builder_populated.png" width="50%">
+	<img src="./images/app_builder_populated_2.png" width="50%">
 	</p>
 	
 14. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.

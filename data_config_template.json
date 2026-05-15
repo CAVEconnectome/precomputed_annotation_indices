@@ -1,7 +1,7 @@
 {
-    "docstring": "DESCRIBE THE DATA. THIS CAN BE A LENGHTY PARAGRAPH PERHAPS. NOT USED BY PIPELINE.",
+    "docstring": "DESCRIBE THE DATA. THIS CAN BE A LENGTHY PARAGRAPH PERHAPS. NOT USED BY PIPELINE.",
     "data_label": "LABEL THE DATA. A SHORT UNIQUE LABEL. NOT USED BY PIPELINE.",
-    "data_version": "VERSION_EG_MATERIALIZATION DESCRIPTOR",
+    "data_version": "VERSION, SUCH AS MATERIALIZATION FOR MICRONS OR WHATEVER VERSION SUITS YOUR DATA.",
     "data_sizes" : {
         "docstring": "A tuple indicating: (1) Num bytes and (2) num records (i.e. table/CSV rows, etc.) in the data. Multiple data sizes are supported via Code Ocean data source names to facilitate development/debugging against smaller subsets of the data.",
         "THE EASIEST LABEL IS THE NAME OF THE DATA CSV FILE WITHOUT THE '.csv' EXTENSION": [NUM_BYTES, NUM_ANNOTATIONS_EG_CSV_ROWS]
@@ -12,13 +12,13 @@
         [MAX_X, MAX_Y, MAX_Z]
     ],
     "dimensions": {
-        "x": [X, "UNITS_EG_nm"],
-        "y": [Y, "UNITS"],
-        "z": [Z, "UNITS"]
+        "x": [X__FOR_EXAMPLE_4, "UNITS_FOR_X__FOR_EXAMPLE_nm_OR_mm"],
+        "y": [Y_NUM, "UNITS_FOR_Y"],
+        "z": [Z_NUM, "UNITS_FOR_Z"]
     },
     "spatial_limit": {
         "docstring": "EXAMPLE: Assume a limit of .5 synapses per cubic micron",
-        "max_annotations_per_cubic_micron": THIS VALUE VARIES WITH ANNOTATION TYPE. ASSIGN null TO DISABLE.
+        "max_annotations_per_cubic_micron": THIS VALUE VARIES WITH ANNOTATION TYPE. ASSIGN null TO DISABLE THIS ERROR CHECK.
     },
     "structure": "one_annotation_per_row__multiple_points_per_row",
     "columns": [
