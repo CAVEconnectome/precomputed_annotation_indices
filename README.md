@@ -137,7 +137,7 @@ Here's the detailed walkthrough:
 	3. Click Confirm.
 
 	<p align="center">
-	<img src="./images/data_connected.png" width="33%" style="margin-left:50px">
+	<img src="./images/data_connected.png" width="25%" style="margin-left:50px">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/edit_data_connection.png" width="33%">
 	</p>
@@ -145,32 +145,30 @@ Here's the detailed walkthrough:
 11. In the upper-left corner, select ***App Builder***.
 
 	<p align="center">
-	<img src="./images/app_builder.png" width="33%">
+	<img src="./images/app_builder_tab.png" width="33%">
 	</p>
 	
-12. Set ***data\_config\_filename*** parameter to "data_config.json".
+12. ***Optionally*** set the ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). You only have to do this if the config file indicates multiple data options. For example, you might offer smaller subsets of the main data intended for development or debugging. For the tutorial, you don't have to do anything here. The default value of ***unspecified*** will suffice.
 
-	<p align="center">
-	<img src="./images/app_builder_populated_1.png" width="50%">
-	</p>
-	
-13. Set ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). Here's a helpful way to find this string without going back to the json file on your local computer:
+	Here's a helpful way to find a string to populate this parameter without going back to the json file on your local computer:
 	1. Switch from the App Builder view to the Files view.
 	2. Click the data config asset under the data folder. This will expand its drop-down view to reveal its contents, namely your json file.
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
-	4. Find the "data_sizes" section in the json file. Then find the label you assigned, and copy it. You can then go back to the App Builder and paste it into the ***data\_source\_name*** parameter:
+	4. Find the "data_sizes" section in the json file. Then find the label you assigned, and copy it. You can then return to the App Builder panel shown below and paste it into the ***data\_source\_name*** parameter.
+
+	As stated above, if you don't wish to choose between multiple datasets, the default value of ***unspecified*** will work fine. Other values that mean "Use whatever is available in the config file" are ***na***, ***none***, and ***a single space character*** (since the App Builder interface will not permit a blank parameter value).
 
 	<p align="center">
-	<img src="./images/app_builder_populated_2.png" width="50%">
+	<img src="./images/app_builder_panel.png" width="50%">
 	</p>
 	
-14. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
+13. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
 
 	<p align="center">
 	<img src="./images/reproducility_section_and_run_button.png" width="33%">
 	</p>
 	
-15. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
+14. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
 
 	<p align="center">
 	<img src="./images/pipeline_running_1.png">
@@ -186,25 +184,25 @@ Here's the detailed walkthrough:
 	<img src="./images/pipeline_run_successfully_completed.png">
 	</p>
 	
-16. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
+15. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
 
 	<p align="center">
 	<img src="./images/results.png" width="33%">
 	</p>
 	
-17. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`. Copy this value.
+16. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`. Copy this value.
 
 	<p align="center">
 	<img src="./images/results_neuroglancer_uri.png">
 	</p>
 	
-18. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
+17. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
 
 	<p align="center">
 	<img src="./images/neuroglancer.png">
 	</p>
 	
-19. The admin (Keith) has the option to move unreleased indices to a more public-facing URI (one that doesn't have "unreleased" in the URI). Ask Keith for help with this as needed.
+18. The admin (Keith) has the option to move unreleased indices to a more public-facing URI (one that doesn't have "unreleased" in the URI). Ask Keith for help with this as needed.
 
 ### Done!
 
