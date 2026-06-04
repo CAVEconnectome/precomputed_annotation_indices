@@ -69,5 +69,8 @@
             "y": "post_pt_position_y",
             "z": "post_pt_position_z"
         }
-    }
+    },
+    "pipeline_config": {
+        "docstring": "All settings in this section are optional. This section can be completely empty if you wish. However, if you need to override any default pipeline configuration settings, they go here. See the pipeline documentation for a description of such options.",
+   }
 }
