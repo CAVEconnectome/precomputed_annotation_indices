@@ -102,7 +102,7 @@ if __name__ == "__main__":
     logging.critical("_" * 100)
     logging.critical("GENERATE CONFIG")
 
-    data_loc = "../data/"
+    data_loc = f"../data/{args.capsule}"
     results_loc = "../results/"
 
     logging.basicConfig(stream=sys.stdout, level=get_logging_level_from_desc(config['LOGGING_LEVEL']), format=config['LOGGING_FORMAT'], force=True)
