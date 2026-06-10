@@ -7,6 +7,8 @@
 				"id": "0c8a3417-e218-421f-b4ef-9c58e41fe4fd",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "8624197",
+				"commit": "cbb01235c85b3a5849dd9e47ee95d55be9fff5b3",
+				"image_tag": "30606f34b4f7c569dab64f37065df9d5",
 				"app_panel": true
 			},
 			"resources": {
@@ -29,6 +31,8 @@
 				"id": "0c8a3417-e218-421f-b4ef-9c58e41fe4fd",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "8624197",
+				"commit": "cbb01235c85b3a5849dd9e47ee95d55be9fff5b3",
+				"image_tag": "30606f34b4f7c569dab64f37065df9d5",
 				"app_panel": true
 			},
 			"resources": {
