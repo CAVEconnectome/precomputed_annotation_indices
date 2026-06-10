@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     args = parse_args()
 
-    data_loc = "../data/{args.capsule}"
+    data_loc = f"../data/{args.capsule}"
     results_loc = "../results/"
 
     config = read_config()
