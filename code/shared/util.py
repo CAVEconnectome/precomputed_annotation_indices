@@ -76,6 +76,24 @@ def hex_to_rgba(hex_str):
         raise ValueError(f"Invalid Hex RGB string: {hex_str}")
     return tuple(int(hex_str[i:i+2], 16) for i in (0, 2, 4, 6))
 
+def parse_args(extra_args=[]):
+    # create a parser object
+    parser = argparse.ArgumentParser()
+    
+    # add the corresponding parameters
+    # parser.add_argument('--data_config_filename', dest='data_config_filename', default='data_config.json')
+    parser.add_argument('--capsule', dest='capsule')
+    parser.add_argument('--data_source_name', dest='data_source_name')
+    for extra_arg in extra_args:
+        parser.add_argument(f'--{extra_arg}', dest=extra_arg)
+    
+    # return the data in the object and save in args
+    args = parser.parse_args()
+
+    logging.critical(f"Args:\n{args}\n")
+
+    return args
+
 def read_config(sub_configs=[]):
     data_loc = "../data/"
     
