@@ -1,8 +1,4 @@
 {
 	"version": 1,
-	"named_parameters": true,
-	"processes": [
-		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
-		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_3"
-	]
+	"named_parameters": true
 }
