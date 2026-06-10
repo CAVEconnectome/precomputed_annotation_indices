@@ -8,6 +8,13 @@
 			"param_name": "capsule",
 			"type": "text",
 			"value_type": "string"
+		},
+		{
+			"id": "lH8ZnL92HCLuM8j2",
+			"name": "data_source_name",
+			"param_name": "data_source_name",
+			"type": "text",
+			"value_type": "string"
 		}
 	]
 }
