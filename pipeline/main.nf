@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:55f9a14e6c8d58513f27d45a1a68994ed2f5c1a81dc1eb9c0f85154527210e49
+// hash:sha256:c27ab1c79350708501e3dfdfa8ce3a189031590a012d68cd6439d767472e57c6
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
@@ -37,7 +37,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8624197.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 32644ac2e63ec2e57d33b032da991b46bcfc9f75 --quiet
+	git -C capsule-repo checkout ea0fe60b2427f8c8a372f34ec45ef61262faa35c --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -86,7 +86,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8624197.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 32644ac2e63ec2e57d33b032da991b46bcfc9f75 --quiet
+	git -C capsule-repo checkout ea0fe60b2427f8c8a372f34ec45ef61262faa35c --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
