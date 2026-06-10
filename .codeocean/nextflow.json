@@ -303,11 +303,11 @@
 			},
 			"inputs": [
 				{
-					"id": "2nm6PPdhhTqGi3pZ",
-					"source_id": "e6523c38-5b15-49a1-9987-73f8989b1d7a",
+					"id": "OxZjA4eHdgzhihmw",
+					"source_id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
 					"type": "dataset",
-					"name": "banc_synapses__v888__data-config",
-					"source_path": "banc_synapses__v888__data-config/"
+					"name": "synapses_pni_2_v1_filtered_view__v1412__data-config",
+					"source_path": "synapses_pni_2_v1_filtered_view__v1412__data-config/"
 				}
 			]
 		},
@@ -521,11 +521,11 @@
 			},
 			"inputs": [
 				{
-					"id": "pEXNMdSyvGFMfEIU",
-					"source_id": "6a5cc148-3f6d-4988-9730-5869c0b6f75d",
+					"id": "IqgVhBfFfUFdC0iq",
+					"source_id": "bacb8982-892d-437b-b732-de1257e7a398",
 					"type": "dataset",
-					"name": "banc_synapses__v888__100-rows",
-					"source_path": "banc_synapses__v888__100-rows/",
+					"name": "synapses_pni_2_v1_filtered_view__v1412__test1",
+					"source_path": "synapses_pni_2_v1_filtered_view__v1412__test1/",
 					"collect": true
 				},
 				{

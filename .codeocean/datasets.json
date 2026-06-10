@@ -6,6 +6,14 @@
 			"mount": "banc_synapses__v888__100-rows"
 		},
 		{
+			"id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
+			"mount": "synapses_pni_2_v1_filtered_view__v1412__data-config"
+		},
+		{
+			"id": "bacb8982-892d-437b-b732-de1257e7a398",
+			"mount": "synapses_pni_2_v1_filtered_view__v1412__test1"
+		},
+		{
 			"id": "e6523c38-5b15-49a1-9987-73f8989b1d7a",
 			"mount": "banc_synapses__v888__data-config"
 		}

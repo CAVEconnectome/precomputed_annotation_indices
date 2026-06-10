@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:3aad32bf6b0343f585bba10ecf8e4f235af9c7dd85a6d9e91b34b539635457a7
+// hash:sha256:5814fd5704994ec46699ebdd64fa47fcc2550f75e35299f90fdae23433b7dc1a
 
 // capsule - Build precomputed annotation indices - generate config
 process capsule_mapreduce_process_synapses_table_generate_config_28 {
@@ -38,7 +38,7 @@ process capsule_mapreduce_process_synapses_table_generate_config_28 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	ln -s "/tmp/data/banc_synapses__v888__data-config/$path22" "capsule/data/$path22" # id: e6523c38-5b15-49a1-9987-73f8989b1d7a
+	ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__data-config/$path22" "capsule/data/$path22" # id: 7c301f12-d69e-4e51-9b9d-9df03066bc1b
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
@@ -87,7 +87,7 @@ process capsule_build_precomputed_annotation_indices_decompress_input_45 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	ln -s "/tmp/data/banc_synapses__v888__100-rows" "capsule/data/banc_synapses__v888__100-rows" # id: 6a5cc148-3f6d-4988-9730-5869c0b6f75d
+	ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__test1" "capsule/data/synapses_pni_2_v1_filtered_view__v1412__test1" # id: bacb8982-892d-437b-b732-de1257e7a398
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
@@ -853,10 +853,10 @@ process capsule_mapreduce_process_synapses_table_reorganize_directory_structure_
 
 workflow {
 	// input data
-	banc_synapses__v888__data_config_to_build_precomputed_annotation_indices_generate_config_22 = Channel.fromPath("../data/banc_synapses__v888__data-config/*", type: 'any', relative: true)
+	synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_generate_config_22 = Channel.fromPath("../data/synapses_pni_2_v1_filtered_view__v1412__data-config/*", type: 'any', relative: true)
 
 	// run processes
-	capsule_mapreduce_process_synapses_table_generate_config_28(banc_synapses__v888__data_config_to_build_precomputed_annotation_indices_generate_config_22)
+	capsule_mapreduce_process_synapses_table_generate_config_28(synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_generate_config_22)
 	capsule_build_precomputed_annotation_indices_decompress_input_45(capsule_mapreduce_process_synapses_table_generate_config_28.out.to_capsule_build_precomputed_annotation_indices_decompress_input_45_35.collect())
 	capsule_mapreduce_process_synapses_table_generate_id_index_config_31(capsule_mapreduce_process_synapses_table_generate_config_28.out.to_capsule_mapreduce_process_synapses_table_generate_id_index_config_31_25.collect())
 	capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5(capsule_mapreduce_process_synapses_table_generate_config_28.out.to_capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5_1.collect())
