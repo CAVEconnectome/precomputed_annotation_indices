@@ -1,0 +1,769 @@
+{
+	"edges": [
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5-capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5",
+			"target": "capsule_mapreduce_process_synapses_table_generate_input_split_6"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_input_split_6-capsule_mapreduce_process_synapses_table_build_relation_index_24",
+			"source": "capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"target": "capsule_mapreduce_process_synapses_table_build_relation_index_24"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_input_split_6-capsule_mapreduce_process_synapses_table_build_id_index_19",
+			"source": "capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"target": "capsule_mapreduce_process_synapses_table_build_id_index_19"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27-results",
+			"source": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_input_split_6"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30-capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30",
+			"target": "capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22-results",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23-results",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_id_index_config_31-capsule_mapreduce_process_synapses_table_build_id_index_19",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_id_index_config_31",
+			"target": "capsule_mapreduce_process_synapses_table_build_id_index_19"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_relation_index_config_32-capsule_mapreduce_process_synapses_table_build_relation_index_24",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_relation_index_config_32",
+			"target": "capsule_mapreduce_process_synapses_table_build_relation_index_24"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_id_index_config_31-capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_id_index_config_31",
+			"target": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_relation_index_config_32-capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_relation_index_config_32",
+			"target": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33-capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33",
+			"target": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_build_id_index_19-capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_build_id_index_19",
+			"target": "capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42-capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42",
+			"target": "capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_id_index_config_31-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_id_index_config_31",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_relation_index_config_32-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_relation_index_config_32",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43-capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43",
+			"target": "capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_build_relation_index_24-capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_build_relation_index_24",
+			"target": "capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33-capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33",
+			"target": "capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_input_split_6-capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44",
+			"source": "capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"target": "capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44-capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44",
+			"target": "capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_id_index_config_31",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_id_index_config_31"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_relation_index_config_32",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_relation_index_config_32"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18-capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"source": "capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18",
+			"target": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42-capsule_mapreduce_process_synapses_table_build_id_index_19",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42",
+			"target": "capsule_mapreduce_process_synapses_table_build_id_index_19"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43-capsule_mapreduce_process_synapses_table_build_relation_index_24",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43",
+			"target": "capsule_mapreduce_process_synapses_table_build_relation_index_24"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30-capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44",
+			"selected": false,
+			"source": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30",
+			"target": "capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44"
+		},
+		{
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_decompress_input_45-capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"selected": false,
+			"source": "capsule_build_precomputed_annotation_indices_decompress_input_45",
+			"target": "capsule_mapreduce_process_synapses_table_generate_input_split_6"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_generate_config_28-capsule_build_precomputed_annotation_indices_decompress_input_45",
+			"source": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"target": "capsule_build_precomputed_annotation_indices_decompress_input_45"
+		},
+		{
+			"id": "xy-edge__capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18-results",
+			"source": "capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__6a5cc148-3f6d-4988-9730-5869c0b6f75d-capsule_build_precomputed_annotation_indices_decompress_input_45",
+			"source": "6a5cc148-3f6d-4988-9730-5869c0b6f75d",
+			"target": "capsule_build_precomputed_annotation_indices_decompress_input_45"
+		},
+		{
+			"id": "xy-edge__e6523c38-5b15-49a1-9987-73f8989b1d7a-capsule_mapreduce_process_synapses_table_generate_config_28",
+			"source": "e6523c38-5b15-49a1-9987-73f8989b1d7a",
+			"target": "capsule_mapreduce_process_synapses_table_generate_config_28"
+		}
+	],
+	"nodes": [
+		{
+			"id": "results",
+			"position": {
+				"x": 1039.8664762480632,
+				"y": 1865.9021606202555
+			},
+			"selected": false,
+			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "fd0844b7-ca3c-4624-974a-dcf8bebf26cd"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_input_split_ranges_and_worker_ids_5",
+			"position": {
+				"x": 591.6665320526006,
+				"y": -367.16856546478004
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "48ba2489-9219-4b75-af28-7457e3234f5e"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_input_split_6",
+			"position": {
+				"x": 367.832607529263,
+				"y": -47.950613362320745
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "932d3df0-8f11-4afb-80df-b85aa9c7cb6a"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_regroup_worker_outputs_18",
+			"position": {
+				"x": 1966.5488591814892,
+				"y": 1176.0127809299208
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "d43d58b5-0064-4503-be30-04f7e4e4e5a6"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_build_id_index_19",
+			"position": {
+				"x": 258.01725560729983,
+				"y": 877.2712717828139
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "b0cc97d8-6408-4e74-b1de-36ff5cec39c4"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_conglomerate_id_index_by_shard_22",
+			"position": {
+				"x": 112.9893564638574,
+				"y": 1186.6045182104285
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "bf946a18-ea80-4c3c-a881-40745d05e4c5"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_conglomerate_relation_index_by_shard_23",
+			"position": {
+				"x": 1053.27058332444,
+				"y": 1175.9075464356597
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "f6fde948-5201-4c3c-87fa-b1e7d5fee472"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_build_relation_index_24",
+			"position": {
+				"x": 1197.0912234198772,
+				"y": 878.3789745331749
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "d855d6a4-6eb9-47a0-b578-cdc9eab36d29"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_reorganize_directory_structure_27",
+			"position": {
+				"x": 1118.4994970341372,
+				"y": 1612.9275977067848
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "d24e6096-2a82-419b-93ec-3e204f35430d"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_config_28",
+			"position": {
+				"x": 1176.2349745549277,
+				"y": -707.2178108138837
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "701988da-2c53-416e-a3c4-eea5ba3563ad",
+			"position": {
+				"x": -361.95339511340546,
+				"y": -500.24447457617543
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "37c56921-a200-44d6-b575-88cac2ef8513"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_30",
+			"position": {
+				"x": 1677.8300622985414,
+				"y": 626.090531449007
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "5dfa81af-419f-4502-a687-826df62d8a69"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_id_index_config_31",
+			"position": {
+				"x": -56.31262630011439,
+				"y": 338.9797858707912
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "c5c7b777-5cb7-4ff7-861a-1cb256362935"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_relation_index_config_32",
+			"position": {
+				"x": 896.3608683936196,
+				"y": 336.63248198911117
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "b51c9b9f-fd0d-4615-8117-c1249a622ba7"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_spatial_index_config_33",
+			"position": {
+				"x": 1863.8964346147968,
+				"y": 339.89889177960913
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "37c56921-a200-44d6-b575-88cac2ef8513"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_42",
+			"position": {
+				"x": -188.52285914479907,
+				"y": 633.1293949309681
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "37c56921-a200-44d6-b575-88cac2ef8513"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_generate_shard_worker_ids_43",
+			"position": {
+				"x": 765.2383500866157,
+				"y": 627.8089712961481
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "bacb8982-892d-437b-b732-de1257e7a398",
+			"position": {
+				"x": -392.7641480005063,
+				"y": -1085.497135038273
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "e2a2e92d-b35d-4f27-a376-34b81173e50f",
+			"position": {
+				"x": -393.745152631227,
+				"y": -989.2759451787235
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "64ce6f7c-fd39-409a-8480-927464b3cf28",
+			"position": {
+				"x": -394.01459818035283,
+				"y": -894.5771190750413
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "fa661835-c8bc-4089-8eae-41ec1a2b4ea4",
+			"position": {
+				"x": -394.10957502674927,
+				"y": -798.0268875390053
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "66ca6a25-e945-455d-bdd3-9ddab319a417",
+			"position": {
+				"x": -393.99410466693786,
+				"y": -697.1214585328107
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "e93eaaf7-8292-49a9-b0a6-ed1c5f1d62b5"
+			},
+			"id": "capsule_mapreduce_process_synapses_table_build_spatial_index_oct_tree_44",
+			"position": {
+				"x": 2119.745362174158,
+				"y": 879.9413692177511
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "74d431ed-d27e-4ad2-833c-dbcbfc03f634",
+			"position": {
+				"x": -394.13529393769664,
+				"y": -596.7056302890345
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "e5a7d10e-b422-47b9-b26e-1d38c4f7267c",
+			"position": {
+				"x": -657.0140636224573,
+				"y": -1073.9623051316958
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "6f0806e9-4c1e-4ed1-b560-7fa02311a8d2",
+			"position": {
+				"x": -637.0815559366117,
+				"y": -981.6936822903426
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "b2ca424a-56b1-4dca-a35a-a4e4fa9297d2",
+			"position": {
+				"x": -635.9950898397738,
+				"y": -887.380114569919
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "a4e99242-654b-4bcb-b2f7-5c998fa28f93",
+			"position": {
+				"x": -635.0515575001074,
+				"y": -799.7372158971574
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "a7d9560a-1c45-493d-b2a8-2ad0117f37c3",
+			"position": {
+				"x": -636.2999873711113,
+				"y": -142.1561069442717
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "2fd8d80f-f533-4889-b06c-038a48afe41b",
+			"position": {
+				"x": -636.2999873711113,
+				"y": -44.63717700646822
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "b4bff49c-dc8d-4857-8945-23035b5a8fe4",
+			"position": {
+				"x": -636.2999873711115,
+				"y": 54.757116968600684
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "61c7736e-bdc5-41d4-8108-5f5aa0c09462",
+			"position": {
+				"x": -636.424623333846,
+				"y": 157.40213901820047
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "6aeb6beb-e346-4c8d-ad9c-5daedd41b8d3",
+			"position": {
+				"x": -635.7970750729878,
+				"y": 260.5398803224913
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "7ed2b280-3075-402a-870e-47682e0bf337",
+			"position": {
+				"x": -606.1820879835284,
+				"y": 356.88493103427254
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "bf353bad-a347-4e48-b390-e231f715e7d3",
+			"position": {
+				"x": 399.63359648689647,
+				"y": -1391.7839388595266
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "d97bb5f1-bd32-4672-89b3-87ef58c987fc",
+			"position": {
+				"x": 774.2586700204153,
+				"y": -1524.098969364274
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "db0ddfff-4d7b-4bb5-8213-0eee5d19de01",
+			"position": {
+				"x": 805.3848643936266,
+				"y": -1331.0526441680647
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
+			"position": {
+				"x": -417.1147228122391,
+				"y": -1184.22464019188
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "32359944-644e-4624-a7d3-8d1ce983dbfc",
+			"position": {
+				"x": -668.8401048309314,
+				"y": -237.92366704753744
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "743f031b-bf93-4c5b-bc6b-e1cd666559eb",
+			"position": {
+				"x": 742.6736098990949,
+				"y": -1622.6650184083796
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "738f61fe-71f7-4370-be2b-8a6a909145b9",
+			"position": {
+				"x": 778.3355874623476,
+				"y": -1429.239678243703
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "294e6fba-7a6d-45a5-bf2e-839cd04135cc",
+			"position": {
+				"x": 1205.5188595279794,
+				"y": -1463.1480382005352
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "c4390fef-7cb2-4d60-9577-e13ac93a40cc",
+			"position": {
+				"x": 1652.4015949980947,
+				"y": -1481.8687607441288
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "590ca6cc-6e66-4776-ad60-d33cf8704c2a",
+			"position": {
+				"x": 1653.2402577573644,
+				"y": -1385.7384327407492
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "41480c05-243a-4db1-9a38-483e9767dcc3",
+			"position": {
+				"x": 1654.490540216937,
+				"y": -1293.4639370463594
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "45e9812b-53f9-4558-ae8a-61a109eedac0",
+			"position": {
+				"x": 1617.8302221093975,
+				"y": -1573.9675161421433
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "30cb7926-1b68-40e7-b967-097922e38de4",
+			"position": {
+				"x": 1684.2324353653,
+				"y": -1192.1794116912406
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "7ffd8ca9-9e2a-4b24-9bdf-1135dbbc3089"
+			},
+			"id": "capsule_build_precomputed_annotation_indices_decompress_input_45",
+			"position": {
+				"x": 154.2087960436352,
+				"y": -368.5574253530924
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "755185c4-10f9-47d0-a53d-978175d64816",
+			"position": {
+				"x": 1174.5487704735028,
+				"y": -1554.636402891496
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "c4a19187-701b-490a-8eec-c0ee80adaea3",
+			"position": {
+				"x": 327.34799906652086,
+				"y": -1581.83355881461
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "c4fb215e-2243-4adf-85f9-776f763a95f6",
+			"position": {
+				"x": 361.3080481587039,
+				"y": -1485.9635547071452
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "6a5cc148-3f6d-4988-9730-5869c0b6f75d",
+			"position": {
+				"x": -85.86129873213288,
+				"y": -1456.5128417021592
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"id": "e6523c38-5b15-49a1-9987-73f8989b1d7a",
+			"position": {
+				"x": -119.86540292931502,
+				"y": -1547.898871732086
+			},
+			"selected": true,
+			"type": "dataset"
+		}
+	],
+	"timestamp": 1781109997001,
+	"viewport": {
+		"x": 516.1191902453269,
+		"y": 958.8350799097282,
+		"zoom": 0.4705314366530464
+	}
+}

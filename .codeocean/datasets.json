@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"attached_datasets": [
+		{
+			"id": "6a5cc148-3f6d-4988-9730-5869c0b6f75d",
+			"mount": "banc_synapses__v888__100-rows"
+		},
+		{
+			"id": "e6523c38-5b15-49a1-9987-73f8989b1d7a",
+			"mount": "banc_synapses__v888__data-config"
+		}
+	]
+}

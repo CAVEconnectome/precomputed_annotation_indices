@@ -1,20 +1,7 @@
 {
 	"version": 1,
 	"named_parameters": true,
-	"parameters": [
-		{
-			"id": "jgcNPlhBSbmsLopF",
-			"name": "capsule",
-			"param_name": "capsule",
-			"type": "text",
-			"value_type": "string"
-		},
-		{
-			"id": "lH8ZnL92HCLuM8j2",
-			"name": "data_source_name",
-			"param_name": "data_source_name",
-			"type": "text",
-			"value_type": "string"
-		}
+	"processes": [
+		"capsule_mapreduce_process_synapses_table_generate_config_28"
 	]
 }
