@@ -1,4 +1,20 @@
 {
 	"version": 1,
-	"named_parameters": true
+	"named_parameters": true,
+	"parameters": [
+		{
+			"id": "SoixrMN0ZK7pQqgy",
+			"name": "capsule",
+			"param_name": "capsule",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "nW1Ors91g5veFiFQ",
+			"name": "data_source_name",
+			"param_name": "data_source_name",
+			"type": "text",
+			"value_type": "string"
+		}
+	]
 }
