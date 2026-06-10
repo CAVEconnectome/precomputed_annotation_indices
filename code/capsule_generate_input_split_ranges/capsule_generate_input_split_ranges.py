@@ -4,7 +4,7 @@ import os
 from timeit import default_timer
 import math
 
-from util import *
+from shared.util import *
 
 def generate_one_data_source_split_range(split_size, num_splits):
     for split_idx in range(num_splits):
