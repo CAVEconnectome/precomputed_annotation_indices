@@ -80,22 +80,6 @@ def add_timestamp_and_uri_to_config(config):
     config['NEUROGLANCER_URI'] = f"gs://{config['GCP_BUCKET']}/{config['GCP_RESULTS_BLOB_PATH']}/{timestamp}/"
     return config
 
-def parse_args():
-    # create a parser object
-    parser = argparse.ArgumentParser()
-    
-    # add the corresponding parameters
-    # parser.add_argument('--data_config_filename', dest='data_config_filename', default='data_config.json')
-    parser.add_argument('--capsule', dest='capsule')
-    parser.add_argument('--data_source_name', dest='data_source_name')
-    
-    # return the data in the object and save in args
-    args = parser.parse_args()
-
-    logging.info(f"Args:\n{args}\n")
-
-    return args
-
 if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL, format='%(message)s')
     logging.critical("_" * 100)
