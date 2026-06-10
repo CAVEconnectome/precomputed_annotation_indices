@@ -96,8 +96,14 @@ if __name__ == "__main__":
 
     logging.info(f"cwd: {os.getcwd()}")
 
-    logging.info("./ contents:")
-    logging.info('  ' + '\n  '.join(sorted(os.listdir("./"))).strip() + '\n')
+    logging.info(". contents:")
+    logging.info('  ' + '\n  '.join(sorted(os.listdir("."))).strip() + '\n')
+
+    logging.info(".. contents:")
+    logging.info('  ' + '\n  '.join(sorted(os.listdir(".."))).strip() + '\n')
+
+    logging.info("../.. contents:")
+    logging.info('  ' + '\n  '.join(sorted(os.listdir("../.."))).strip() + '\n')
 
     logging.info(f"{data_loc} contents:")
     logging.info('  ' + '\n  '.join(sorted(os.listdir(data_loc))).strip() + '\n')
