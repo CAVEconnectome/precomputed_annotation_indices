@@ -7,4 +7,4 @@ capsule="${1#--capsule=}"
 
 echo "Running capsule: '$capsule'"
 
-python -u -m ${capsule}.${capsule}.py "$@"
+python -u -m ${capsule}.${capsule} "$@"
