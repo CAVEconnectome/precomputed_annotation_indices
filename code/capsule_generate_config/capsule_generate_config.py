@@ -102,14 +102,14 @@ if __name__ == "__main__":
     logging.critical("_" * 100)
     logging.critical("GENERATE CONFIG")
 
-    data_loc = f"../data/{args.capsule}"
-    results_loc = "../results/"
-
     logging.basicConfig(stream=sys.stdout, level=get_logging_level_from_desc(config['LOGGING_LEVEL']), format=config['LOGGING_FORMAT'], force=True)
 
     analyze_memory_usage()
 
     args = parse_args()
+
+    data_loc = f"../data/{args.capsule}"
+    results_loc = "../results/"
 
     logging.info(f"{data_loc} contents:")
     logging.info('  ' + '\n  '.join(sorted(os.listdir(data_loc))).strip() + '\n')
