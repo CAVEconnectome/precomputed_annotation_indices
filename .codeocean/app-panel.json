@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"parameters": [
+		{
+			"id": "jgcNPlhBSbmsLopF",
+			"name": "capsule",
+			"param_name": "capsule",
+			"type": "text",
+			"value_type": "string"
+		}
+	]
+}
