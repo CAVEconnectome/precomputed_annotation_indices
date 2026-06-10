@@ -39,7 +39,8 @@ if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=get_logging_level_from_desc(config['LOGGING_LEVEL']), format=config['LOGGING_FORMAT'], force=True)
 
     logging.info(f"{data_loc} contents:")
-    logging.info('  ' + '\n  '.join(sorted(os.listdir(data_loc))).strip() + '\n')
+    if os.path.exists(data_loc):
+        logging.info('  ' + '\n  '.join(sorted(os.listdir(data_loc))).strip() + '\n')
 
     os.makedirs(f"{results_loc}input_splits/", exist_ok=True)
     os.makedirs(f"{results_loc}conglomeration_worker_allocations/", exist_ok=True)
