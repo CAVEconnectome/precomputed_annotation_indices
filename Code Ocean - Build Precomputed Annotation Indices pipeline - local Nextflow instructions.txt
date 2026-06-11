@@ -70,6 +70,16 @@ From Code Ocean and Nextflow's perspective, you are now ready to run the pipelin
 If you don't have that file, figure that out somehow. The next step is really tricky. You can't just export the contents of that file to the environment variable because Code Ocean will interpret/evaluate/convert all the syntax in the environment variable, most troublingly the quotes and such that the json secret contains. After much wrangling with escape characters and conversions and blah blah blah I gave up trying to solve this problem and instead base-64 encoded the whole secrets file to completely obscure its textual content when treating it as an environment variable. This means the capsule code *expects* the environment variable to have been base-64 encoded and will promptly base-64 decode it before using it. So we must base-64 encode the google secret file contents before pasting it into the GOOGLE_SECRET environment variable of the shell. I'll leave it to you to figure out how to do that, but it will end up with a command line command like the following:
   $ export GOOGLE_SECRET=<your_base64_encoded_google_secret>
 
+The following is a Python script that will read and convert your cloudvolume google-secret.json to the required string. Run this, copy the result, and paste it to the command above:
+import base64
+with open("<PATH_TO_HOME_DIRECTORY>/.cloudvolume/secrets/google-secret.json") as f:
+    google_secret_json = f.read()
+google_secret_json_clean = google_secret_json.strip().replace('\n', ' ')
+google_secret_json_clean_bytes = google_secret_json_clean.encode('utf-8')
+google_secret_json_clean_bytes_b64encoded_bytes = base64.b64encode(google_secret_json_clean_bytes)
+google_secret_b64encoded = google_secret_json_clean_bytes_b64encoded_bytes.decode('utf-8')
+print(google_secret_b64encoded)
+
 ____________________________________________________________________________________________________
 FIXING THE CONFIG FILES
 __________
@@ -92,6 +102,7 @@ We need to specify the intended input data source. After all, if you exported th
 It is configured to process my "test4" dataset, a subset of my whole dataset. If I want to process a different dataset, I need to change this line to, perhaps:
   ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__test1" "capsule/data/synapses_pni_2_v1_filtered_view__v1412__test1" # id: fa661835-c8bc-4089-8eae-41ec1a2b4ea4
 Study the contents of your data/ subdirectory and make sure you indicate the intended data source on this line. Notice that the data source is reference twice in the "ln" command!
+
 There is another step here. We must specify the data source as a command line argument to the pipeline. Open pipeine/nextflow-codeocean.config and find the params section:
   params {
       capsule_mapreduce_process_synapses_table_generate_config_28_args = "--data_source_name=unspecified"
