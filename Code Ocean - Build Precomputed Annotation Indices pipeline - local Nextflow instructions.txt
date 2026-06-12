@@ -140,7 +140,7 @@ Change all instances to:
   git -C capsule-repo checkout HEAD --quiet
 There is one more problem however. Running the pipeline will still attempt to use any currently downloaded capsules when you run it. It won't explicitly repull them. To force Nextflow to repull the capsules, remove the pipeline/work/ directory before rerunning the pipeline (it won't be there when you first download the pipeline, but will appear after you run the pipeline the first time). You must remove that work/ directory every time you run the pipeline if you want it to pull any changes to the capsules:
 $ rm -rf work
-Or you can combine the two commands into a one-liner:
+Or you can combine the two commands into a one-liner (NOTE THAT THIS MAY FAIL!):
 $ rm -rf work && DATA_PATH=$PWD/../data nextflow -log ../results/nextflow/nextflow.log run main.nf -resume
-If that fails, use the original command, like this:
+I find that the command above often fails ala "ln: /data: Read-only file system". If that occurs, try the original command from above, like this:
 $ rm -rf work && DATA_PATH=$PWD/../data nextflow -c nextflow-codeocean.config -log ../results/nextflow/nextflow.log run main.nf -resume
