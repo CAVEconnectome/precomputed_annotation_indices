@@ -1,5 +1,6 @@
+____________________________________________________________________________________________________
 DOWNLOADING THE PIPELINE
-__________
+----------
 
 The pipeline can be downloaded to a local machine. It won't be run via Code Ocean locally, but rather simply via the underlying Nextflow.
 
@@ -24,7 +25,7 @@ Read the REPRODUCING markdown file. It walks through running the pipeline pretty
 
 ____________________________________________________________________________________________________
 API KEYS, PYTHON ENVIRONMENT, DOCKER, SETTING UP THE ENVIRONMENT
-__________
+----------
 
 First, get an API key. In a browser, open Code Ocean and in the lower-left corner click your initials inside a circle and then click Account from the popup menu. The upper-left has three options: Credentials, User Secrets, and Access Tokens. Click Access Tokens. You should have at least one token already because you must have created one to use Code Ocean in the first place. However, there is no way to retrieve a token after you have created it. You can see them listed here, but you can't get their contents. If you saved your token when you created it, use that. Otherwise, go ahead and click 'Generate new token' in the upper-right. Give it a name and grant whatever accesses you want it to have. Then click Add Token. This will produce a new popup that makes the token available for you to copy. This is your only opportunity to do so. If you miss it, you'll have to trash the token and make another one (which is easy enough). Assuming you have copied the token, the next step will create a secret, which acts very similar. You give it a key (like a name) and copy the secret, just like you did with the token. Note that deleting tokens and secrets are done from the different options in the upper-left corner of the accounts view. Note that in my experience these two values (the token value and the secret value) are literally the exact same string. With the token and secret saved (and copied to some text file for subsequent use), return to the downloaded pipeline.
 
@@ -57,13 +58,13 @@ This worked for me.
 
 ____________________________________________________________________________________________________
 DATA
-__________
+----------
 
 Now you need data, the first order of business mentioned in the REPRODUCING file. The file will give you some indication of how to retrieve files from the Code Ocean storage and hopefully that will work for you. Ultimately, somehow, you need to get files into the data/ subdirectory in the same format and layout that it appears in the Code Ocean GUI since that it is how the initial capsules will expect to receive it from Nextflow.
 
 ____________________________________________________________________________________________________
 CREDENTIALS
-__________
+----------
 
 From Code Ocean and Nextflow's perspective, you are now ready to run the pipeline. However, in ways that Code Ocean and Nextflow can't see, you actually aren't ready to run this particular pipeline yet. The annotation index pipeline relies on additional credentials that Code Ocean and Nextflow don't necessarily know about (they occur in the capsule code itself, which Code Ocean and Nextflow don't know to inspect before running the pipeline). Namely, some capsules upload data to Google buckets while other capsules download data from Google buckets. This is a technique I developed to avoid having Code Ocean pass data between consecutive capsules using its own built-in mechanism. Instead, some capsules in the pipeline, upload their results to GCP while the next capsules in the pipeline download those results from GCP, and data passed between the two capsules through Code Ocean is kept extremely minimal (or none at all). I designed the pipeline this way to achieve true MapReduce behaviors that Code Ocean can't facilitate (Nextflow might, but Code Ocean's simplified wrapping around Nextflow doesn't). Brief explanation: Code Ocean's "Collect" connection method passes all data from all upstream capsules to all downstream capsules, but MapReduce should conceptually divide the upstream data into labeled groups and only pass each group (a subset of the total data) to the downstream capsules that "subscribe" to a given label. My approach has all upstream capsules upload all their data to a GCP bucket, and then passes almost no data (or *absolutely* no data) to the downstream capsules. The downstream capsules then download only the data they need from the GCP buckets. All of this is to say that an exported local pipeline needs GCP credentials. Therefore you must export your google secret. Where does the secret come from? Most CAVE users, such as yourself, will have already stored them in:
   ~/.cloudvolume/secrets/google-secret.json
@@ -82,7 +83,7 @@ print(google_secret_b64encoded)
 
 ____________________________________________________________________________________________________
 FIXING THE CONFIG FILES
-__________
+----------
 
 Code Ocean still hasn't prepared Nextflow correctly though! The google secrets environment variable still won't work yet! ARGH! Code Ocean bundles the exported pipeline with two config files, which you will find the pipeline/ directory:
   pipeline/nextflow.config
@@ -95,7 +96,7 @@ Why oh why must we deal with this nonsense, amirite? Make that correction on all
 
 ____________________________________________________________________________________________________
 SPECIFYING THE DATA SOURCE
-__________
+----------
 
 We need to specify the intended input data source. After all, if you exported the pipeline with a configuration that connected to a huge dataset, then that is what your local Nextflow will expect. You might not have even downloaded that particular dataset above where obtaining data was described. Open pipeline/main.nf. This describes the entire pipeline: all the capsules, all the data assets, and all the connections between them. Search for "Build precomputed annotation indices - decompress input". You are now looking at the configuration of the capsule that takes in the original input data. It is the only capsule that receives a direct connection from a specified input data source. This is where you need to make an alteration to process a different input data source. In the capsule configuration find the "ln" command. It's right below several "mkdir" commands. You need to alter the arguments to the "ln" command to point to your desired input data as downloaded and arranged in the data/ subdirectory, which you did above. For example, perhaps the "ln" command initially looks like this:
   ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__test4" "capsule/data/synapses_pni_2_v1_filtered_view__v1412__test4" # id: fa661835-c8bc-4089-8eae-41ec1a2b4ea4
@@ -111,7 +112,7 @@ The "data_source_name" needs to be populated with the same name you just put in 
 
 ____________________________________________________________________________________________________
 RUNNING THE PIPELINE
-__________
+----------
 
 Whoa. We're done. You should be ready to run the pipeline now. To run the pipeline, the command is offered in REPRODUCING. However (wait, there's a however?), it is problematic because the command as offered in the REPRODUCING file sets the Nextflow version to 24.10.4, which won't work. So simply discard that from the beginning of the command, thusly:
   $ DATA_PATH=$PWD/../data nextflow -c nextflow-codeocean.config -log ../results/nextflow/nextflow.log run main.nf -resume
@@ -120,7 +121,7 @@ That *should* run your pipeline. If not, buena suerte en tu travesía amigo.
 
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
-__________
+----------
 
 Let's assume that actually works on the first try. Yeah right. Where are the results?
 
@@ -128,7 +129,7 @@ In the Nextflow export directory, you will see a results/ directory. It should h
 
 ____________________________________________________________________________________________________
 RUNNING THE PIPELINE AGAIN, PERHAPS WITH CODE ALTERATIONS
-__________
+----------
 
 The next problem is that the pipeline is not modifiable. What Code Ocean has done is download a milestoned version of your pipeline. If you edit the capsules, say in the Code Ocean GUI in the browser, and commit your changes, and rerun the locally downloaded pipeline, it won't pull your code changes! To make Nextflow pull updates to the capsules, open pipeline/main.nf. Peruse the file and see how it is laid out. It contains blocks for each capsule in the pipeline. Find the line in each block that pulls the capsule. It is a "git -C capsule-repo checkout" line. Each such line pulls a hash code (a random mix of letters and numbers):
   git -C capsule-repo checkout <SOME_LONG_HASH_STRING> --quiet
