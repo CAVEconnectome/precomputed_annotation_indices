@@ -1,5 +1,21 @@
 # Precomputed annotation indices
 
+The first thing to note is that at the current time, there are two considerably different versions of this project stored in two (actually three) different Git repos. Please read this section first and choose the one more appropriate to your needs.
+
+## Internal Code Ocean project, with accompanying local Nextflow project
+
+The original version, stored in this repo and documented below, represents the original development of the distributed annotation index builder. It is built in Code Ocean, and although it can be exported as a local Nextflow pipeline (either to be run on your local machine or to be sent to some other cloud environment), that exported pipeline still requires Code Ocean credentials to run locally because it relies on pulling code from internally owned Code Ocean repos. As such, without the necessary credentials, neither the Code Ocean approach nor the exported Nextflow approach can easily be used by external users. If you have Allen Institute access, this repo may still be of use to you (contact Keith Wiley for assistance), but in the medium to long term, it is my intent to move the entire project, its usage, and its support, to the alternate repo, described next. This repo will likely be depricated in the future.
+
+## External Code Ocean, with accompanying local Nextflow project
+
+Because of the credentialing and authentication issues described above, I completely redesigned the Code Ocean capsules and pipelines around an approach that fully relies on external resources. This change doesn't significantly affect the Code Ocean approach since it still relies on having an Allen Institute account and credentials. However, the Nextflow pipeline exported from that Code Ocean pipeline (to your local machine, or alternatively sent back to a cloud environment) is fully independent of such limitations, and can be run by anyone.
+
+The external Code Ocean project and accompanying Nextflow pipeline can be found at ***[https://github.com/CAVEconnectome/precomputed_annotation_indices_pipeline](https://github.com/CAVEconnectome/precomputed_annotation_indices_pipeline)***.
+
+# Precomputed annotation indices
+
+Proceeding from this point, the assumption is that you have chosen the older, Allen Institute-specific approach to running the pipeline, either in Code Ocean or as an exported Nextflow project.
+
 This repo wraps a Code Ocean pipeline repo that produces various indices of precomputed annotations, crucially spatial indices to expedite rapid user interface interactions in Neuroglancer.
 
 At the time of this writing, three indices are produced for a given input of annotation data:
