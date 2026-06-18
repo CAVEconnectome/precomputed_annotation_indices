@@ -33,7 +33,7 @@ The pipeline can be run in two very different ways in two different environments
 * Code Ocean
 * Nextflow
 
-Code Ocean is a full commercial product that runs in a browser and on AWS. It wraps Nextflow with a user-friendly GUI and hides much of the Nextflow complexity from view, so as to ease overall use. If you prefer to run a Code Ocean pipeline outside of the Code Ocean environment, the method consists of exporting the Code Ocean pipeline, which produces a Nextflow pipeline on your local machine, which can then be run locally, or can be transported elsewhere, such as to a differetn cloud architecture to be run via whatever other tools may facilitate Nextflow processing without regard for Code Ocean.
+Code Ocean is a full commercial product that runs in a browser and on AWS. It wraps Nextflow with a user-friendly GUI and hides much of the Nextflow complexity from view, so as to ease overall use. If you prefer to run a Code Ocean pipeline outside of the Code Ocean environment, the method consists of exporting the Code Ocean pipeline, which produces a Nextflow pipeline on your local machine, which can then be run locally, or can be transported elsewhere, such as to a different cloud architecture to be run via whatever other tools may facilitate Nextflow processing without regard for Code Ocean.
 
 This README explains how to run the pipeline within Code Ocean. For detailed instructions on how to run an exported Nextflow pipeline on a local machine, see the associated file in this repo: ***[Code Ocean - Build Precomputed Annotation Indices pipeline - local Nextflow instructions.txt](https://github.com/CAVEconnectome/precomputed_annotation_indices/blob/main/Code%20Ocean%20-%20Build%20Precomputed%20Annotation%20Indices%20pipeline%20-%20local%20Nextflow%20instructions.txt)***
 
@@ -56,7 +56,7 @@ Here are the main stages to produce a precomputed annotation index from an annot
 
 Here's the detailed walkthrough:
 
-1. Export the table from the database as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
+1. Export your data table as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
 2. Create a data config json file. The name doesn't matter.
 	1. Start from a local copy of the template provided in this repo (*data\_config\_template.json*) and populate all the required fields (indicated in all-caps). This file must end up as legal JSON. Pass it through a JSON validator after you fill it in. Several are readily found online. If aspects of the template are confusing, use the example file (*data\_config\_example.json*) to guide you. It shows a fully populated config file for the MICrONS synapse annotation table.
 	2. Amongst other aspects of the data for this template, you will need:
@@ -93,7 +93,7 @@ Here's the detailed walkthrough:
 		16. Congratulations on completing the data config file. 
 3. Upload the CSV or Parquet data file and the data config json file to Code Ocean as two new Data Assets.
 	1. TODO: provide some description of this process within the Code Ocean interface.
-4. Open the Code Ocean pipeline: [https://codeocean.allenneuraldynamics.org/capsule/1541857/tree](https://codeocean.allenneuraldynamics.org/capsule/1541857/tree)
+4. Open the Code Ocean pipeline: [https://codeocean.allenneuraldynamics.org/capsule/3702420/tree](https://codeocean.allenneuraldynamics.org/capsule/3702420/tree)
 
 	<p align="center">
 	<img src="./images/pipeline_template.png">
@@ -225,4 +225,3 @@ Here's the detailed walkthrough:
 ### Done!
 
 Congratulations on what I'm confident was a flawless and satisfying experience.
-
