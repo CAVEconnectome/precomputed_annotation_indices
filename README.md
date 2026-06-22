@@ -1,6 +1,6 @@
 # Precomputed annotation indices
 
-The first thing to note is that at the current time, there are two considerably different versions of this project stored in two (actually three) different Git repos. Please read this section first and choose the one more appropriate to your needs.
+The first thing to note is that at the current time, there are two considerably different versions of this project stored in two (actually three) different Git repos. Please read this top section before looking anywhere else, and then be sure to choose the project more appropriate to your needs.
 
 ## Internal Code Ocean project, with accompanying local Nextflow project
 
